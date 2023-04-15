@@ -13,11 +13,12 @@ Print the read time in the input file (seconds) converted in hours:minutes:secon
 
 
 def converter(seconds):
-    h, m, s = 0, 0, 0
-    h = seconds // 3600
-    m = int(seconds / 3600 * 60)
-    s = (seconds % 3600 * 60) * 60
-    return f'{h}:{m}:{s}'
+    h = round(seconds // 3600)
+    m = round((seconds % 3600) / 60)
+    s = round(seconds % 60)
+    return f"{h}:{m}:{s}"
 
 
 print(converter(556))
+print(converter(1))
+print(converter(140153))
