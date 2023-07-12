@@ -27,7 +27,8 @@ def cadastra_aluno():
                 break
             else:
                 continue
-    return lista_alunos
+    procura_aluno = str(input('Para pesquisar digite o nome do aluno:\n'))
+    return encontra_nome(procura_aluno, lista_alunos)
 
 
-print(encontra_nome('al', cadastra_aluno()))
+print(cadastra_aluno())
